@@ -1,0 +1,26 @@
+{
+    "name": "evalty/survey",
+    "description": "survey builder",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Evalty\\Survey\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "abeer",
+            "email": "abeerabdu363@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Evalty\\Survey\\Providers\\SurveyServiceProvider"
+            ]
+        }
+    }
+}
