@@ -15,7 +15,9 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "php": "^8.2"
+    },
     "extra": {
         "laravel": {
             "providers": [
