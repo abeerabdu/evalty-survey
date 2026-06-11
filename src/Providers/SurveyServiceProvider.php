@@ -8,7 +8,10 @@ class SurveyServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
-        //
+        // $this->mergeConfigFrom(
+        //     __DIR__ . '/../../config/survey.php',
+        //     'survey'
+        // );
     }
 
     public function boot(): void
@@ -23,5 +26,10 @@ class SurveyServiceProvider extends ServiceProvider
             __DIR__ . '/../../config/survey.php'
             => config_path('survey.php'),
         ], 'survey-config');
+
+        $this->loadViewsFrom(
+            __DIR__ . '/../../resources/views',
+            'survey'
+        );
     }
 }
