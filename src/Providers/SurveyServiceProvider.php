@@ -16,16 +16,22 @@ class SurveyServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
+        // dd('SurveyServiceProvider loaded');
+
         $this->loadRoutesFrom(__DIR__ . '/../../routes/web.php');
 
         $this->loadMigrationsFrom(
             __DIR__ . '/../../database/migrations'
         );
 
+        // $this->publishes([
+        //     __DIR__ . '/../../config/survey.php'
+        //     => config_path('survey.php'),
+        // ], 'survey-config');
+
         $this->publishes([
-            __DIR__ . '/../../config/survey.php'
-            => config_path('survey.php'),
-        ], 'survey-config');
+            __DIR__ . '/../../dist' => public_path('vendor/survey'),
+        ], 'survey-assets');
 
         $this->loadViewsFrom(
             __DIR__ . '/../../resources/views',
